@@ -3,10 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Photobox.WPFClient.views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Black">
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=StandByViewModel}"
+             Width="auto" Height="auto">
+    <Grid Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <TextBlock Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50">Click to taking photos</TextBlock>
-        <MediaElement Source="/Assets/Sleep.mp4" LoadedBehavior="Play" Width="300" Height="300"/>
+        <MediaElement  
+                      LoadedBehavior="Play"
+                      UnloadedBehavior="Play"
+                      Width="300" 
+                      Height="300"
+                      Name="mePlayer">
+            <MediaElement.Triggers>
+                <EventTrigger RoutedEvent="MediaElement.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <MediaTimeline Source="{Binding ClickOnMe}" Storyboard.TargetName="mePlayer"  
+                                    RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </MediaElement.Triggers>
+        </MediaElement>
     </Grid>
 </UserControl>

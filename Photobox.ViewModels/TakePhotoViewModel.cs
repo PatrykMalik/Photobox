@@ -7,9 +7,18 @@ namespace Photobox.ViewModels
 {
     public class TakePhotoViewModel : BaseViewModel
     {
+        private string _takingPhotoClipPath;
+
+        public string TakingPhotoClipPath
+        {
+            get { return _takingPhotoClipPath; }
+            set { _takingPhotoClipPath = value; }
+        }
+
         ICameraService _cameraService;
         public TakePhotoViewModel(ICameraService cameraService)
         {
+            TakingPhotoClipPath = @"E:\Source\Repos\Photobox\Photobox\assets\CountingDown.mp4";
             _cameraService = cameraService;
             TakePhotoAsync();
         }

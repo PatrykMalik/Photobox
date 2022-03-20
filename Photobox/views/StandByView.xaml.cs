@@ -10,7 +10,7 @@ namespace Photobox.WPFClient.Views
     {
         public StandByView()
         {
-            InitializeComponent();
-        }
+            InitializeComponent();         
+        }       
     }
 }

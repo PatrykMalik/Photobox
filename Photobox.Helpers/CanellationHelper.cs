@@ -7,7 +7,7 @@ namespace Photobox.WPFClient.helper
     {
         private static CanellationHelper instance;
         private static object syncRoot = new Object();
-        public bool CancellationToken { get; set; } = false;
+        public bool CancellationToken { get; set; } = true;
         public static CanellationHelper Instance
         {
             get

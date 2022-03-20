@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=TakePhotoViewModel}">
     <Grid>
-        <MediaElement Source="/Assets/CountingDown.mp4" LoadedBehavior="Play" Width="300" Height="300"/>
+        <MediaElement Source="{Binding TakingPhotoClipPath}" LoadedBehavior="Play" Width="300" Height="300"/>
         <TextBlock Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50">Taking photos</TextBlock>
     </Grid>
 </UserControl>
