@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Photobox.WPFClient.Views.StandByView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Black">
+        <TextBlock Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50">Click to taking photos</TextBlock>
+        <MediaElement Source="/Assets/Sleep.mp4" LoadedBehavior="Play" Width="300" Height="300"/>
+    </Grid>
+</UserControl>

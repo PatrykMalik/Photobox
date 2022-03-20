@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Photobox.Helpers\Photobox.Helpers.csproj" />
+    <ProjectReference Include="..\Photobox.IServices\Photobox.IServices.csproj" />
+    <ProjectReference Include="..\Photobox.Models\Photobox.Models.csproj" />
+  </ItemGroup>
+
+</Project>

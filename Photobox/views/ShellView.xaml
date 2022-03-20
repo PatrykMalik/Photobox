@@ -1,0 +1,41 @@
+﻿<Window x:Class="Photobox.WPFClient.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Photobox.WPFClient.Views"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        mc:Ignorable="d"
+        Title="ShellView" Height="450" Width="800"
+        WindowStyle="None"
+        DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=ShellViewModel}"
+        WindowState="Maximized">
+    <Grid>
+        
+        <DockPanel>
+            <DockPanel.Resources>
+                
+            </DockPanel.Resources>
+            <DockPanel DockPanel.Dock="Top">
+                <Button DockPanel.Dock="Right" Command="{Binding CloseCommand}" Content="Close">
+                    <!--<i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:CallMethodAction MethodName="Close"
+                           TargetObject="{Binding RelativeSource={RelativeSource
+                                                  Mode=FindAncestor,
+                                                  AncestorType=Window}}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>-->
+                </Button>
+                <Button Height="20" Width="120" Command="{Binding ShowViewCommand}"
+                        CommandParameter="ServiceMenuView.xaml">Service Menu</Button>
+                <Button Height="20" Background="Transparent"
+                    Command="{Binding ShowViewCommand}"
+                    CommandParameter="LoopView.xaml">
+                    Start Program
+                </Button>
+            </DockPanel>
+                <Frame Source="{Binding SelectedView}"/>
+        </DockPanel>
+    </Grid>
+</Window>

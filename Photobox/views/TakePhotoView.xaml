@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Photobox.WPFClient.views.TakePhotoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Photobox.WPFClient.views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=TakePhotoViewModel}">
+    <Grid>
+        <MediaElement Source="/Assets/CountingDown.mp4" LoadedBehavior="Play" Width="300" Height="300"/>
+        <TextBlock Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50">Taking photos</TextBlock>
+    </Grid>
+</UserControl>
