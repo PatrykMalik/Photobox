@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading;
 
-namespace Photobox.WPFClient.helper
+namespace Photobox.Helpers
 {
-    public class CanellationHelper 
+    public class CanellationHelper
     {
         private static CanellationHelper instance;
-        private static object syncRoot = new Object();
+        private static object syncRoot = new object();
         public bool CancellationToken { get; set; } = true;
         public static CanellationHelper Instance
         {

@@ -1,5 +1,4 @@
-﻿using Photobox.WPFClient.helper;
-using Prism.Events;
+﻿using Photobox.Helpers;
 using System.Windows.Input;
 
 namespace Photobox.ViewModels

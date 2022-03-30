@@ -17,12 +17,31 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="assets\CountingDown.mp4">
+    <None Update="assets\PostPhotoVideos\Untitled 3.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="assets\Sleep.mp4">
+    <None Update="assets\PostPhotoVideos\Untitled 6.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="assets\PrePhotoVideos\CountingDown.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\PrePhotoVideos\Untitled 4.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\PrePhotoVideos\Untitled 5.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\StandByVideos\Sleep.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\StandByVideos\Untitled 1.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="assets\PostPhotoVideos\" />
   </ItemGroup>
 
 </Project>

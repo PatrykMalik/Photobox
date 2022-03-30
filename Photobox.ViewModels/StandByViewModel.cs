@@ -1,8 +1,11 @@
-﻿namespace Photobox.ViewModels
+﻿using Photobox.IServices;
+
+namespace Photobox.ViewModels
 {
     public class StandByViewModel : BaseViewModel
     {
         private string _clickOnMe;
+        private readonly IAssetsHelper _assetsHelper;
 
         public string ClickOnMe
         {
@@ -13,9 +16,10 @@
                 OnPropertyChanged();
             }
         }
-        public StandByViewModel()
+        public StandByViewModel(IAssetsHelper assetsHelper)
         {
-            ClickOnMe = @"E:\Source\Repos\Photobox\Photobox\assets\Sleep.mp4";
+            _assetsHelper = assetsHelper;
+            ClickOnMe = _assetsHelper.GetPostPhotoVideo();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Photobox.WPFClient.helper;
+﻿using Photobox.Helpers;
 using System.Windows.Input;
 
 namespace Photobox.ViewModels
@@ -27,10 +27,10 @@ namespace Photobox.ViewModels
             switch (SelectedView)
             {
                 case "StandByView.xaml":
-                    SelectedView = "TakePhotoView.xaml";
+                    SelectedView = "PrePhotoView.xaml";
                     CanellationHelper.Instance.CancellationToken = false;
                     break;
-                case "TakePhotoView.xaml":
+                case "PrePhotoView.xaml":
                     SelectedView = "StandByView.xaml";
                     CanellationHelper.Instance.CancellationToken = true;
                     break;

@@ -1,5 +1,5 @@
-﻿using Photobox.IServices;
-using Photobox.WPFClient.helper;
+﻿using Photobox.Helpers;
+using Photobox.IServices;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -21,10 +21,14 @@ namespace Photobox.CameraService
                 return;
             await CountingDownAnimationAsync(theadId);
             TakingPhotoAsync(theadId);
-            if (CanellationHelper.Instance.CancellationToken) 
+        }
+        public async Task SavePhotoAsync(int theadId)
+        {
+            if (CanellationHelper.Instance.CancellationToken)
                 return;
             SavingPhotoAsync(theadId);
             await SavingAnimationAsync(theadId);
+
         }
         private async Task CountingDownAnimationAsync(int theadId)
         {
